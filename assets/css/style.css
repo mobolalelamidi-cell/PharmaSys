@@ -402,6 +402,63 @@ a {
     font-weight: 700;
 }
 
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.report-card {
+    display: block;
+    min-height: 150px;
+    padding: 20px;
+    color: var(--secondary);
+    background: #f8fafc;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--secondary);
+    border-radius: 8px;
+}
+
+.report-card:hover {
+    color: var(--secondary);
+    border-color: #cbd5e1;
+    background: #ffffff;
+}
+
+.report-card.primary {
+    border-left-color: var(--primary);
+}
+
+.report-card.success {
+    border-left-color: var(--success);
+}
+
+.report-card.warning {
+    border-left-color: var(--warning);
+}
+
+.report-card.danger {
+    border-left-color: var(--danger);
+}
+
+.report-card span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.report-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.report-subtitle {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
 .auth-page {
     min-height: 100vh;
     display: grid;
@@ -460,7 +517,8 @@ a {
     .filter-bar.sales-filter,
     .purchase-item-row,
     .detail-grid,
-    .payment-grid {
+    .payment-grid,
+    .report-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -491,7 +549,8 @@ a {
     .filter-bar.sales-filter,
     .purchase-item-row,
     .detail-grid,
-    .payment-grid {
+    .payment-grid,
+    .report-grid {
         grid-template-columns: 1fr;
     }
 
@@ -535,6 +594,11 @@ a {
     }
 
     .receipt-panel {
+        border: 0;
+        box-shadow: none;
+    }
+
+    .report-panel {
         border: 0;
         box-shadow: none;
     }
